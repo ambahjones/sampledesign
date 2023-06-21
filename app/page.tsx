@@ -1,4 +1,8 @@
-import Image from 'next/image'
+import {
+  CloudArrowUpIcon,
+  LockClosedIcon,
+  ServerIcon,
+} from "@heroicons/react/20/solid";
 
 export default function Home() {
   const posts = [
@@ -16,7 +20,7 @@ export default function Home() {
       author: {
         name: "Michael Foster",
         role: "Co-Founder / CTO",
-        href: "#",
+        href: "",
         imageUrl:
           "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
       },
@@ -51,7 +55,10 @@ export default function Home() {
                   </div>
                   <div>
                     <div className="flex items-center gap-x-4 text-xs">
-                      <time dateTime={post.datetime} className="text-gray-500 dark:text-gray-200">
+                      <time
+                        dateTime={post.datetime}
+                        className="text-gray-500 dark:text-gray-200"
+                      >
                         {post.date}
                       </time>
                       <a
@@ -86,7 +93,9 @@ export default function Home() {
                               {post.author.name}
                             </a>
                           </p>
-                          <p className="text-gray-600 dark:text-gray-300">{post.author.role}</p>
+                          <p className="text-gray-600 dark:text-gray-300">
+                            {post.author.role}
+                          </p>
                         </div>
                       </div>
                     </div>
